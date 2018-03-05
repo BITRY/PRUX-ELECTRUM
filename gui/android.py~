@@ -134,7 +134,7 @@ def make_layout(s, scrollable = False):
 
         <TextView
           android:id="@+id/textElectrum"
-          android:text="Electrum-PRUX"
+          android:text="Electrum-LTC"
           android:textSize="7pt"
           android:textColor="#ff4444ff"
           android:gravity="left"
@@ -440,7 +440,7 @@ def pay_to(recipient, amount, label):
     else:
         password = None
 
-    droid.dialogCreateSpinnerProgress("Electrum-PRUX", "signing transaction...")
+    droid.dialogCreateSpinnerProgress("Electrum-LTC", "signing transaction...")
     droid.dialogShow()
 
     try:
@@ -581,7 +581,7 @@ def payto_loop():
                 amount = droid.fullQueryDetail('amount').result.get('text')
 
                 if not is_address(recipient):
-                    modal_dialog('Error','Invalid Prux address')
+                    modal_dialog('Error','Invalid Litecoin address')
                     continue
 
                 try:
@@ -660,7 +660,7 @@ def receive_loop():
             modal_dialog('URI copied to clipboard', receive_URI)
 
         elif event["name"]=="amount":
-            amount = modal_input('Amount', 'Amount you want to receive (in PRUX). ', format_satoshis(receive_amount) if receive_amount else None, "numberDecimal")
+            amount = modal_input('Amount', 'Amount you want to receive (in LTC). ', format_satoshis(receive_amount) if receive_amount else None, "numberDecimal")
             if amount is not None:
                 receive_amount = int(100000000 * Decimal(amount)) if amount else None
                 out = 'receive'
@@ -941,7 +941,7 @@ class ElectrumGui:
                 exit()
 
             msg = "Creating wallet" if action == 'create' else "Restoring wallet"
-            droid.dialogCreateSpinnerProgress("Electrum-PRUX", msg)
+            droid.dialogCreateSpinnerProgress("Electrum-LTC", msg)
             droid.dialogShow()
             wallet.start_threads(network)
             if action == 'restore':

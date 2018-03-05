@@ -26,7 +26,7 @@ if platform.system() in [ 'Linux', 'FreeBSD', 'DragonFly']:
 
 
 setup(
-    name="Electrum-PRUX",
+    name="Electrum-LTC",
     version=version.ELECTRUM_VERSION,
     install_requires=[
         'slowaes>=0.1a1',
@@ -61,10 +61,10 @@ setup(
     },
     scripts=['electrum-ltc'],
     data_files=data_files,
-    description="Lightweight Prux Wallet",
+    description="Lightweight Litecoin Wallet",
     author="Thomas Voegtlin",
     author_email="thomasv@electrum.org",
     license="GNU GPLv3",
     url="http://electrum-ltc.org",
-    long_description="""Lightweight Prux Wallet"""
+    long_description="""Lightweight Litecoin Wallet"""
 )

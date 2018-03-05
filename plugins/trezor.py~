@@ -301,7 +301,7 @@ class TrezorWallet(BIP32_HD_Wallet):
         except Exception, e:
             give_error(e)
         try:
-            self.get_client().get_address('Prux', address_n, True)
+            self.get_client().get_address('Litecoin', address_n, True)
         except Exception, e:
             give_error(e)
         finally:
@@ -316,7 +316,7 @@ class TrezorWallet(BIP32_HD_Wallet):
         except Exception, e:
             give_error(e)
         try:
-            msg_sig = self.get_client().sign_message('Prux', address_n, message)
+            msg_sig = self.get_client().sign_message('Litecoin', address_n, message)
         except Exception, e:
             give_error(e)
         finally:
@@ -333,7 +333,7 @@ class TrezorWallet(BIP32_HD_Wallet):
         inputs = self.tx_inputs(tx)
         outputs = self.tx_outputs(tx)
         try:
-            signed_tx = self.get_client().sign_tx('Prux', inputs, outputs)[1]
+            signed_tx = self.get_client().sign_tx('Litecoin', inputs, outputs)[1]
         except Exception, e:
             give_error(e)
         finally:
@@ -428,7 +428,7 @@ class TrezorWallet(BIP32_HD_Wallet):
             address = self.addresses(False)[0]
             address_id = self.address_id(address)
             n = self.get_client().expand_path(address_id)
-            device_address = self.get_client().get_address('Prux', n)
+            device_address = self.get_client().get_address('Litecoin', n)
             self.device_checked = True
 
             if device_address != address:
