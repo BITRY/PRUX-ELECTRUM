@@ -17,15 +17,15 @@ string = string.replace("##VERSION_MAC##", version_mac)
 files = {
     'tgz': "Electrum-PRUX-%s.tar.gz" % version,
     'zip': "Electrum-PRUX-%s.zip" % version,
-    'mac': "electrum-ltc-%s.dmg" % version_mac,
-    'win': "electrum-ltc-%s.exe" % version_win,
-    'win_setup': "electrum-ltc-%s-setup.exe" % version_win,
-    'win_portable': "electrum-ltc-%s-portable.exe" % version_win,
+    'mac': "electrum-prux-%s.dmg" % version_mac,
+    'win': "electrum-prux-%s.exe" % version_win,
+    'win_setup': "electrum-prux-%s-setup.exe" % version_win,
+    'win_portable': "electrum-prux-%s-portable.exe" % version_win,
 }
 
 for k, n in files.items():
     path = "binaries/%s"%n
-    link = "https://download.electrum-ltc.org/%s"%n
+    link = "https://download.electrum-prux.org/%s"%n
     if not os.path.exists(path):
         os.system("wget -q %s -O %s" % (link, path))
     if not os.path.getsize(path):

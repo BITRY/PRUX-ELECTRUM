@@ -20,8 +20,8 @@ data_files = []
 if platform.system() in [ 'Linux', 'FreeBSD', 'DragonFly']:
     usr_share = os.path.join(sys.prefix, "share")
     data_files += [
-        (os.path.join(usr_share, 'applications/'), ['electrum-ltc.desktop']),
-        (os.path.join(usr_share, 'pixmaps/'), ['icons/electrum-ltc.png'])
+        (os.path.join(usr_share, 'applications/'), ['electrum-prux.desktop']),
+        (os.path.join(usr_share, 'pixmaps/'), ['icons/electrum-prux.png'])
     ]
 
 
@@ -59,12 +59,12 @@ setup(
             "qt/themes/dark/style.css",
         ]
     },
-    scripts=['electrum-ltc'],
+    scripts=['electrum-prux'],
     data_files=data_files,
     description="Lightweight Prux Wallet",
     author="Thomas Voegtlin",
     author_email="thomasv@electrum.org",
     license="GNU GPLv3",
-    url="http://electrum-ltc.org",
+    url="http://electrum-prux.org",
     long_description="""Lightweight Prux Wallet"""
 )

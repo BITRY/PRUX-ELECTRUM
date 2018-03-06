@@ -93,13 +93,13 @@ def profiler(func):
 
 def user_dir():
     if "HOME" in os.environ:
-        return os.path.join(os.environ["HOME"], ".electrum-ltc")
+        return os.path.join(os.environ["HOME"], ".electrum-prux")
     elif "APPDATA" in os.environ:
         return os.path.join(os.environ["APPDATA"], "Electrum-PRUX")
     elif "LOCALAPPDATA" in os.environ:
         return os.path.join(os.environ["LOCALAPPDATA"], "Electrum-PRUX")
     elif 'ANDROID_DATA' in os.environ:
-        return "/sdcard/electrum-ltc/"
+        return "/sdcard/electrum-prux/"
     else:
         #raise Exception("No home directory found in environment variables.")
         return
@@ -193,7 +193,7 @@ block_explorer_info = {
                         {'tx': 'tx', 'addr': 'address'}),
     'block-explorer.com': ('https://block-explorer.com',
                         {'tx': 'tx', 'addr': 'address'}),
-    'Blockr.io': ('https://ltc.blockr.io',
+    'Blockr.io': ('https://prux.blockr.io',
                         {'tx': 'tx/info', 'addr': 'address/info'}),
     'SoChain': ('https://chain.so',
                         {'tx': 'tx/PRUX', 'addr': 'address/PRUX'}),

@@ -19,7 +19,7 @@ class ElectrumGui:
         self.network = network
         storage = WalletStorage(config.get_wallet_path())
         if not storage.file_exists:
-            print "Wallet not found. try 'electrum-ltc create'"
+            print "Wallet not found. try 'electrum-prux create'"
             exit()
 
         self.wallet = Wallet(storage)

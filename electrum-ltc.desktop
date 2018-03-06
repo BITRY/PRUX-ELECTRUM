@@ -3,10 +3,10 @@
 
 [Desktop Entry]
 Comment=Lightweight Prux Client
-Exec=electrum-ltc %u
+Exec=electrum-prux %u
 GenericName[en_US]=Electrum-PRUX
 GenericName=Electrum-PRUX
-Icon=electrum-ltc
+Icon=electrum-prux
 Name[en_US]=Electrum Prux Wallet
 Name=Electrum Prux Wallet
 Categories=Network;

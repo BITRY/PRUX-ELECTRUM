@@ -2,13 +2,13 @@
 # sudo desktop-file-install electrum.desktop
 
 [Desktop Entry]
-Comment=Lightweight Litecoin Client
+Comment=Lightweight Prux Client
 Exec=electrum-ltc %u
-GenericName[en_US]=Electrum-LTC
-GenericName=Electrum-LTC
+GenericName[en_US]=Electrum-PRUX
+GenericName=Electrum-PRUX
 Icon=electrum-ltc
-Name[en_US]=Electrum Litecoin Wallet
-Name=Electrum Litecoin Wallet
+Name[en_US]=Electrum Prux Wallet
+Name=Electrum Prux Wallet
 Categories=Network;
 StartupNotify=false
 Terminal=false

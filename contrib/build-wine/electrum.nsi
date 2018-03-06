@@ -8,7 +8,7 @@
 
   ;Name and file
   Name "Electrum-PRUX"
-  OutFile "dist/electrum-ltc-setup.exe"
+  OutFile "dist/electrum-prux-setup.exe"
 
   ;Default installation folder
   InstallDir "$PROGRAMFILES\Electrum-PRUX"
@@ -59,7 +59,7 @@ Section
   SetOutPath "$INSTDIR"
 
   ;ADD YOUR OWN FILES HERE...
-  file /r dist\electrum-ltc\*.*
+  file /r dist\electrum-prux\*.*
 
   ;Store installation folder
   WriteRegStr HKCU "Software\Electrum-PRUX" "" $INSTDIR
@@ -68,12 +68,12 @@ Section
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
 
-  CreateShortCut "$DESKTOP\Electrum-PRUX.lnk" "$INSTDIR\electrum-ltc.exe" ""
+  CreateShortCut "$DESKTOP\Electrum-PRUX.lnk" "$INSTDIR\electrum-prux.exe" ""
 
   ;create start-menu items
   CreateDirectory "$SMPROGRAMS\Electrum-PRUX"
   CreateShortCut "$SMPROGRAMS\Electrum-PRUX\Uninstall.lnk" "$INSTDIR\Uninstall.exe" "" "$INSTDIR\Uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\Electrum-PRUX\Electrum-PRUX.lnk" "$INSTDIR\electrum-ltc.exe" "" "$INSTDIR\electrum-ltc.exe" 0
+  CreateShortCut "$SMPROGRAMS\Electrum-PRUX\Electrum-PRUX.lnk" "$INSTDIR\electrum-prux.exe" "" "$INSTDIR\electrum-prux.exe" 0
 
 SectionEnd
 

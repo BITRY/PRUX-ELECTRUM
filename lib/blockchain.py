@@ -36,7 +36,7 @@ class Blockchain(util.DaemonThread):
         self.config = config
         self.network = network
         self.lock = threading.Lock()
-        self.headers_url = 'http://headers.electrum-ltc.org/blockchain_headers'
+        self.headers_url = 'http://headers.electrum-prux.org/blockchain_headers'
         self.queue = Queue.Queue()
         self.local_height = 0
         self.set_local_height()
